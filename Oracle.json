@@ -1,0 +1,398 @@
+[
+    {
+      "ques": "What are Schema Objects?",
+      "ans": "Schema objects are tables, views, sequences, synonyms, indexes,databases triggers, procedures, functions, packages."
+    },
+    {
+      "ques": "What is a Table?",
+      "ans": "The table is collection inforamation.A table is the basic of rows and columns.data’s are stored rows and columns."
+    },
+    {
+      "ques": "What is a View?",
+      "ans": "A View is a virtual table.Not a physical table.\nrepresentation of one or more tables\nEvery view has a query attached to it."
+    },
+    {
+      "ques": "What is an Index?",
+      "ans": "An index is uset to performace tunnig in queries. which can be created to increase the performance of data retrieval. Index can be created on one or more columns of a table."
+    },
+    {
+      "ques": "What is a Data file?",
+      "ans": "A database’s data files contain all the database data. The data of logical database structures is tables and indexes is physically stored in the data files allocated for a database."
+    },
+    {
+      "ques": "What is the difference between UNIQUE or PRIMARY KEY Constraint?",
+      "ans": "A column defined as PRIMARY KEY can contain unique values\nsame as UNIQUE but UNIQUE can contain NULLs while a column defined as PRIMARY KEY cannot contain NULLs."
+    },
+    {
+      "ques": "What is PL/SQL ?",
+      "ans": "PL/SQL is a programming language. SQL and procedural programming language constructs such as named blocks,iterations, conditional branching.."
+    },
+    {
+      "ques": "What is the basic structure of PL/SQL ?",
+      "ans": "PL/SQL uses block structure as its basic two structure. Anonymous blocks or nested blocks can be used in PL/SQL."
+    },
+    {
+      "ques": "What is the difference between %ROWTYPE and TYPE RECORD ?",
+      "ans": "%ROWTYPE is its accept multiple data type.to be used whenever query returns an entire row of a table or view.\nTYPE RECORD is accept single data type.to be used whenever query returns columns of different tables or views and variables."
+    },
+    {
+      "ques": "What is a cursor ? Why cursor is required ?",
+      "ans": "Cursor is a named private sql area from where information can be passed and excuted or accessed. Cursors are required to process rows individually for queries returning multiple rows."
+    },
+    {
+      "ques": "Explain the two types of cursors ?",
+      "ans": "Implicit cursors\nExplicit cursors.\nFor loop cursors.\nPL/SQL uses Implicit cursors for queries.\nUser defined cursors are called explicit cursors.\nUser using Cursors in for loop the Cursor called for loop Cursor."
+    },
+    {
+      "ques": "What is Raise_application_error ?",
+      "ans": "Raise_application_error is a procedure of package DBMS_STANDARD. that allows to user_defined error or error code and error messages from stored sub program or database trigger."
+    },
+    {
+      "ques": "What is the difference between a PROCEDURE and FUNCTION ?",
+      "ans": "A PROCEDURE may return one or more values or may not return at all.\nA FUNCTION must returns a value using the return statement."
+    },
+    {
+      "ques": "What is Overloading of procedures ?",
+      "ans": "The same procedure name is repeated with parameters of different datatypes and parameters in different positions, varying number of parameters is called overloading of procedures."
+    },
+    {
+      "ques": "What is a package ? What are the advantages of package ?",
+      "ans": "database object that groups logically related procedures.\nThe advantages of packages are modularity, easier application design, information hiding, reusability and better performance"
+    },
+    {
+      "ques": "What is difference between TRUNCATE and DELETE?",
+      "ans": "Truncate is Dml Statements. Cannot be rolled back. Delete allows the filtered deletion.\nDeleted records can be rolled back or committed."
+    },
+    {
+      "ques": "What is a join? Explain the different types of joins?",
+      "ans": "Join is a query,retrieves data from related columns or rows from multiple tables.\nSelf join – Joining the table with itself\nEqui Join – Joining two tables by equating two common columns\nNon Equi Join – Joining two tables based on conditions other than equating two common columns\nOuter Join – Joining two tables in such a way that query can also retrieve rows that do not have the corresponding join value in the other table."
+    },
+    {
+      "ques": "What is a Subquery?",
+      "ans": "Subquery is a query embedded with another Query\nOuter Query based on the Inner Query"
+    },
+    {
+      "ques": "What is correlated sub-query?",
+      "ans": "Correlated sub-query is a sub-query, which has reference to the main query."
+    },
+    {
+      "ques": "Difference between SUBSTR and INSTR?",
+      "ans": "INSTR(string1, string2 [,n,[m]])\nits find the position of the string\nSUBSTR(string1, n, m)\nSUBSTR returns a character string of size m in string 1, starting from nth position of string1."
+    },
+    {
+      "ques": "Explain UNION, MINUS, UNION ALL, INTERSECT? INTERSECT returns all commmon rows selected by both queries.",
+      "ans": "MINUS returns all distinct rows selected by the first query but not by the second.\nUNION returns all unique rows selected by either query.\nUNION ALL returns all rows selected by either query, included all duplicates."
+    },
+    {
+      "ques": "What are the Usages of SAVEPOINTS?",
+      "ans": "SAVEPOINTS are Transaction control Language.\nits used to subdivide a transaction into smaller parts. It enables rolling back part of a transaction.\nMaximums of five save points are allowed."
+    },
+    {
+      "ques": "What is ROWID?",
+      "ans": "ROWID is a pseudo column attached to each row of a table.\nIt is 18 characters long, blockno. Rownumber.filenumber are the components of ROWID."
+    },
+    {
+      "ques": "What is PRIMARY KEY, UNIQUE KEY, FOREIGN KEY?",
+      "ans": "PRIMARY KEY is a column or a combination of columns of a table which cab be used to uniquely identify a row of the table. PRIMARY KEY cannot be null.\nUNIQUE KEY is a column or a combination of columns of a table, which can be used to identify a row of the table uniquely. UNIQUE KEY can be null.\nFOREIGN KEY is a column or a combination of column which is the primary key or unique key of the referenced table. FOREIGN KEY can be null."
+    },
+    {
+      "ques": "What is ON DELETE CASCADE?",
+      "ans": "ORACLE maintains referential integrity by automatically removing dependent foreign key values if a referenced primary or unique key value is removed."
+    },
+    {
+      "ques": "What is difference between CHAR and VARCHAR2? What is maximum SIZE allowed for each type?",
+      "ans": "CHAR pads spaces to the maximum length. VARCHAR2 does not pad blank spaces.\nFor CHAR it is 255 and 2000 for VARCHAR2."
+    },
+    {
+      "ques": "How to store the results of a query into a file?",
+      "ans": "The results of a query can be stored into a file by spooling into a file.\nEg. SPOOL filename."
+    },
+    {
+      "ques": "Which two statements about subqueries are true? (Choose two.)",
+      "ans": "A. A single row subquery can retrieve data from only one table.\nB. A SQL query statement cannot display data from table B that is referred to in its subquery,\nunless table B is included in the main query’s FROM clause.\nC. A SQL query statement can display data from table B that is referred to in its subquery,without including table B in its own FROM clause.\nD. A single row subquery can retrieve data from more than one table.\nE. A single row subquery cannot be used in a condition where the LIKE operator is used for comparison.\nF. A multiple-row subquery cannot be used in a condition where the LIKE operator is used for comparison."
+    },
+    {
+      "ques": "Which three functions can be used to manipulate character, number, or date column values? (Choose three.)",
+      "ans": "A. CONCAT\nB. ROUND\nC. TRUNC\nD. RPAD\nE. INSTR"
+    },
+    {
+      "ques": "Which statement about a table is true?",
+      "ans": "A. A table can have up to 10,000 columns.\nB. The size of a table does NOT need to be specified.\nC. A table CANNOT be created while users are using the\ndatabase.\nD. The structure of a table CANNOT be modified while the table is online."
+    },
+    {
+      "ques": "What will be returned from SIGN(ABS(NVL(-32,0)))?",
+      "ans": "A. 1\nB. 32\nC. 1\nD. 0\nE. NULL"
+    },
+    {
+      "ques": "Which functions could you use to strip leading characters from a character string. Select two.",
+      "ans": "A. LTRIM\nB. SUBSTR\nC. RTRIM\nD. INSTR\nE. MOD"
+    },
+    {
+      "ques": "All the operators are used in single row subquery except one",
+      "ans": "a) Between … and\nb) < >\nc) =\nd) in"
+    },
+    {
+      "ques": "All the commands executes in iSQLplus except one",
+      "ans": "a) Column\nb) Compute\nc) define\nd) Accept"
+    },
+    {
+      "ques": "Ascript file which will be executed automatically in iSQLPlus is",
+      "ans": "a) afiedt.buf\nb) login.sql\nc) both a and b\nd) none of the above."
+    },
+    {
+      "ques": "A command in iSQL plus is used to give the status of old and new value of variable",
+      "ans": "a) set feedback\nb) set verify\nc) set confirm\nd) none of the above"
+    },
+    {
+      "ques": "All commands are used to save the changes of the transaction except one",
+      "ans": "a) Commit\nb) exitting from sqlplus\nc) DDL command\nd) savepoint\ne) none of the above"
+    },
+    {
+      "ques": "A Clause which is used in joining two tables other than equality operator is",
+      "ans": "a) join\nb) on\nc) in\nd) using"
+    },
+    {
+      "ques": "A Clause which is the pseudocolumn used to know the current value of the sequence",
+      "ans": "a) nextval\nb) current_val\nc) currval\nd) none of the above"
+    },
+    {
+      "ques": "A Query which is used in top-N analysis is",
+      "ans": "a) subquery\nb) correlated subquery\nc) inline query\nd) outer query"
+    },
+    {
+      "ques": "An operator is used to get and display the redundant records",
+      "ans": "a) Union all\nb) Distinct\nc) Union\nd) Intersect"
+    },
+    {
+      "ques": "All the datatypes with respect to Oracle 9i is true except one",
+      "ans": "a) DATE\nb) TIMESTAMP\nc) TIMSTAMP with TIME ZONE\nd) TIMESTAMP WITH LOCAL TIME ZONE\ne) None of the above"
+    },
+    {
+      "ques": "What is database?",
+      "ans": "A database is a logically collection of data with some inherent meaning.the data’s stored rows and collumns\ndatabase are used to store the informations."
+    },
+    {
+      "ques": "To select records from the given row?",
+      "ans": "select * from SIVAEMP where rownum < =(select count(*)-&n from SIVAEMP);"
+    },
+    {
+      "ques": "Explain the difference between trigger and stored procedure.",
+      "ans": "To check the leap year select decode(mod(2004,4),0,’leap year’, ‘not a leap year’) from dual"
+    },
+    {
+      "ques": "Differences between DATE and TIMESTAMP in Oracle",
+      "ans": "To delete duplicate records delete from sivaemp where rowid not in(select max(rowid) from sivaemp group by empno)"
+    },
+    {
+      "ques": "Create a copy of EMP table without any data?",
+      "ans": "To keep latest single record delete from sivaemp where rowid not in(select min(rowid) from sivaemp group by empno)//to keep oldest record"
+    },
+    {
+      "ques": "Delete the 10th record of EMP table?",
+      "ans": "To select second max salary"
+    },
+    {
+      "ques": "Find all the departments which have more than 3 employees? SELECT D.DNAME, COUNT (E.ENAME) FROM EMP E, DEPT D WHERE D.DEPTNO=E.DEPTNO GROUP BY DNAME HAVING COUNT (EMPNO) > 3;\nDisplay the manager who is having maximum number of employees working under him?Display the name of employees who joined on the same date?",
+      "ans": "select * from sivaemp where salary = (select max(salary) from sivaemp where salary not in (select max(salary) from sivaemp))"
+    },
+    {
+      "ques": "Display the name of employees who joined on the same date?",
+      "ans": "To select nth max salary select * from sivaemp a where &n-1 = (select count(*) from sivaemp b where a.salary < b .salary)\nselect * from sivaemp a where &n = (select count(*) from sivaemp b where a.salary < =b.salary)"
+    },
+    {
+      "ques": "Delete those employees who joined the company 10 years back from today?",
+      "ans": "To select nth min salary select * from sivaemp a where &n-1 = (select count(*) from sivaemp b where a.salary > b.salary)\nselect * from sivaemp a where &n = (select count(*) from sivaemp b where a.salary > =b.salary)"
+    },
+    {
+      "ques": "Find out the number of employees whose salary is greater than their manager salary?",
+      "ans": "To select top(n) max salaries select * from sivaemp a where &n > (select count(*) from sivaemp b where a.salary < b .salary)"
+    },
+    {
+      "ques": "Select the count of employees in each dept where count is greater than 3?",
+      "ans": "To select top(n) min salaries select * from sivaemp a where &n > (select count(*) from sivaemp b where a.salary > b.salary)"
+    },
+    {
+      "ques": "What is a transaction ?",
+      "ans": "To select records from particular row(the remaining rows) select * from sivaemp minus select * from sivaemp where rownum < = (select count(*)- &n-1 from sivaemp )"
+    },
+    {
+      "ques": "What is implicit cursor and how is it used by Oracle ?",
+      "ans": "to select first n rows select * from sivaemp where rownum < = (select count(*) + &n -count(*) from sivaemp)"
+    },
+    {
+      "ques": "Explain the difference between trigger and stored procedure.",
+      "ans": "Trigger in act which is performed automatically before or after a event occur when DML operations are occur Trigger is Fire.\nStored procedure is a set of functionality which is executed when it is explicitly invoked."
+    },
+    {
+      "ques": "Is there a PL/SQL Engine in SQL*Plus?",
+      "ans": "Date is used to store date and time values including month, day, year, century, hours, minutes and seconds. TimeStamp datatype stores everything that Date stores and additionally stores fractional seconds.\nDate: 16:05:14\nTimestamp: 16:05:14:"
+    },
+    {
+      "ques": "Can one read/write files from PL/SQL?",
+      "ans": "CREATE TABLE EMP1 AS SELECT * FROM EMP WHERE‘CHIRU’=’VENKY’;"
+    },
+    {
+      "ques": "How can I protect my PL/SQL source code?",
+      "ans": "DELETE FROM EMP WHERE ENAME= (SELECT ENAME FROM EMP WHERE ROWNUM < =10 MINUS SELECT ENAME FROM EMP WHERE ROWNUM<10);"
+    },
+    {
+      "ques": "Can one use dynamic SQL within PL/SQL? OR Can you use a DDL in a procedure ? How ?",
+      "ans": "SELECT DISTINCT M.ENAME, COUNT (E.ENAME)\nFROM EMP E, EMP M WHERE E.MGR=M.EMPNO\nGROUP BY M.ENAME HAVING COUNT (E.ENAME) > =ALL\n(SELECT COUNT (E.ENAME) FROM EMP E, EMP M\nWHERE E.MGR=M.EMPNO GROUP BY M.ENAME);"
+    },
+    {
+      "ques": "What are the various types of parameter modes in a procedure ?",
+      "ans": "SELECT A.ENAME FROM EMP A, EMP B\nWHERE A.EMPNO < > B.EMPNO AND A.HIREDATE=B.HIREDATE;"
+    },
+    {
+      "ques": "What are the constructs of a procedure, function or a package ?",
+      "ans": "SELECT ENAME FROM EMP\nWHERE (SYSDATE-HIREDATE)/365 > 10"
+    },
+    {
+      "ques": "Why Create or Replace and not Drop and recreate procedures ?",
+      "ans": "Display those employees whose salary is ODD value? SELECT ENAME, SAL FROM EMP\nWHERE MOD (SAL, 2) < > 0;"
+    },
+    {
+      "ques": "Can you pass parameters in packages ? How ?",
+      "ans": "SELECT COUNT (E.ENAME) FROM EMP E, EMP M\nWHERE E.MGR=M.EMPNO AND E.SAL > M.SAL"
+    },
+    {
+      "ques": "What are the parts of a database trigger ?",
+      "ans": "SELECT JOB, COUNT (*) FROM EMP\nGROUP BY JOB HAVING COUNT (*) > 3;"
+    },
+    {
+      "ques": "What are the various types of database triggers ?",
+      "ans": "Display name of those employees who are getting the highest salary? SELECT * FROM EMP WHERE SAL IN (SELECT MAX (SAL) FROM EMP);"
+    },
+    {
+      "ques": "What is the advantage of a stored procedure over a database trigger ?",
+      "ans": "A transaction is a set of SQL statements between any two COMMIT and ROLLBACK statements."
+    },
+    {
+      "ques": "What are cascading triggers? What is the maximum no of cascading triggers at a time?",
+      "ans": "An implicit cursor is user pass single line queries that time a cursor which is internally created by Oracle.It is created by Oracle for each individual SQL."
+    },
+    {
+      "ques": "What are mutating triggers ?",
+      "ans": "Indexes, tables, public synonyms, triggers and packages ?"
+    },
+    {
+      "ques": "What are constraining triggers ?",
+      "ans": "Public synonyms"
+    },
+    {
+      "ques": "Describe Oracle database’s physical and logical structure ?",
+      "ans": "SQL*Plus does not have a PL/SQL engine.Thus, all your PL/SQL are send directly to the database engine for execution.This makes it much more efficient as SQL statements are not stripped off and send to the database individually."
+    },
+    {
+      "ques": "Can you increase the size of a tablespace ? How ?",
+      "ans": "Included in Oracle 7.3 is a UTL_FILE package that can read and write files.The directory you intend writing to has to be in your INIT.\nBefore Oracle 7.3 the only means of writing a file was to use DBMS_OUTPUT with the SQL*Plus SPOOL command.\nDECLARE\nfileHandler UTL_FILE.FILE_TYPE;\nBEGIN\nfileHandler := UTL_FILE.FOPEN(‘/home/oracle/tmp’, ‘myoutput’,’W’);\nUTL_FILE.PUTF(fileHandler, ‘Value of func1 is %sn’, func1(1));\nUTL_FILE.FCLOSE(fileHandler);\nEND;"
+    },
+    {
+      "ques": "What is the use of Control files ?",
+      "ans": "PL/SQL V2.2, available with Oracle7.2, implements a binary wrapper for PL/SQL programs to protect the source code.This is done via a standalone utility that transforms the PL/SQL source code into portable binary object code (somewhat larger than the original).This way you can distribute software without having to worry about exposing your proprietary algorithms and methods.SQL*Plus and SQL*DBA will still understand and know how to execute such scripts.Just be careful, there is no “decode” command available. The syntax is: wrap name=myscript.sql oname=xxxx.yyy"
+    },
+    {
+      "ques": " What is the use of Data Dictionary ?",
+      "ans": "From PL/SQL V2.1 one can use the DBMS_SQL package to execute dynamic SQL statements.\nEg: CREATE OR REPLACE PROCEDURE DYNSQL AS\ncur integer;\nrc integer;\nBEGIN\ncur := DBMS_SQL.OPEN_CURSOR;\nDBMS_SQL.PARSE(cur,’CREATE TABLE X (Y DATE)’,\nDBMS_SQL.NATIVE);\nrc := DBMS_SQL.EXECUTE(cur);\nDBMS_SQL.CLOSE_CURSOR(cur);\nEND;"
+    },
+    {
+      "ques": "What are the states of a rollback segment ? What is the difference between partly available and needs recovery ?",
+      "ans": "IN, OUT AND INOUT."
+    },
+    {
+      "ques": "What is the maximum no.of columns a table can have ?",
+      "ans": "The constructs of a procedure, function or a package are :variables and constants\ncursors\nexceptions"
+    },
+    {
+      "ques": "Can you pass a parameter to a cursor ?",
+      "ans": "So that Grants are not dropped."
+    },
+    {
+      "ques": "What are the various types of RollBack Segments ?",
+      "ans": "Yes.You can pass parameters to procedures or functions in a package."
+    },
+    {
+      "ques": "What are the disadvantages of SQL ?",
+      "ans": "A triggering event or statement\nA trigger restriction\nA trigger action"
+    },
+    {
+      "ques": "When to create indexes ?",
+      "ans": "There are 12 types of triggers\nInsert, Delete and Update Triggers.\nBefore and After Triggers.\nRow and Statement Triggers."
+    },
+    {
+      "ques": "How can you avoid indexes ?",
+      "ans": "We have control over the firing of a stored procedure but we have no control over the firing of a trigger."
+    },
+    {
+      "ques": "What is the difference between a view and a synonym ?",
+      "ans": "When a statement in a trigger body causes another trigger to be fired, the triggers are said to be cascading.Max = 32."
+    },
+    {
+      "ques": "What is the difference between foreign key and reference key ?",
+      "ans": "A trigger giving a SELECT on the table on which the trigger is written."
+    },
+    {
+      "ques": "What is a package cursor ?",
+      "ans": "A trigger giving an Insert/Updat e on a table having referential integrity constraint on the triggering table."
+    },
+    {
+      "ques": "What are snap shots and views",
+      "ans": "Physical : Data files, Redo Log files, Control file.\nLogical : Tables, Views, Tablespaces, etc."
+    },
+    {
+      "ques": "",
+      "ans": "Yes, by adding datafiles to it."
+    },
+    {
+      "ques": "",
+      "ans": "Contains pointers to locations of various data files, redo log files, etc."
+    },
+    {
+      "ques": "",
+      "ans": "It Used by Oracle to store information about various physical and logical structures e.g.Tables"
+    },
+    {
+      "ques": "",
+      "ans": "The various states of a rollback segment are :\nONLINE\nOFFLINE\nPARTLY AVAILABLE\nNEEDS RECOVERY\nINVALID."
+    },
+    {
+      "ques": "",
+      "ans": "254."
+    },
+    {
+      "ques": "",
+      "ans": "Explicit cursors can take parameters,User create cursor called Explicit Cursor\nCURSOR c1 (median IN NUMBER) IS\nSELECT job, ename FROM emp WHERE sal > median;"
+    },
+    {
+      "ques": "",
+      "ans": "The types of Rollback sagments are as follows :\nPublic Available to all instances\nPrivate Available to specific instance"
+    },
+    {
+      "ques": "",
+      "ans": "Cannot drop a field\nCannot rename a field\nCannot manage memory\nProcedural Language option not provided\nIndex on view or index on index not provided\nView updation problem"
+    },
+    {
+      "ques": "",
+      "ans": "To be created when table is queried for less than 2% or 4% to 25% of the table rows."
+    },
+    {
+      "ques": "",
+      "ans": "To make index access path unavailable Use FULL hint to optimizer for full table scan Use INDEX or AND-EQUAL hint to optimizer to use one index or set to indexes instead of another"
+    },
+    {
+      "ques": "",
+      "ans": "Synonym is Schema Object,just a second name of table,.View can be created with many tables, and with virtual columns and with conditions."
+    },
+    {
+      "ques": "",
+      "ans": "Foreign key is attribute which refers to another table primary key. Reference key is the primary key of table referred by another table."
+    },
+    {
+      "ques": "",
+      "ans": "a cursor declare in the package specification without an SQL statement.\nThe SQL statement for the cursor is attached at runtime from calling procedures."
+    },
+    {
+      "ques": "What are snap shots and views",
+      "ans": "Snapshots are mirror or replicas of tables. Views are built using the columns from one or more tables."
+    }
+  ]

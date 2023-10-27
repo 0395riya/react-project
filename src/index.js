@@ -1,13 +1,22 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
+import ApiComponent from './Data/ApiComponent';
+import App from './App';
+import Todo from './Todo';
+import Header from './Header';
+import UserForm from './UserForm';
+
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <ApiComponent/>
+    {/* <Todo/> */}
+    {/* <Header/> */}
+    {/* <UserForm/> */}
+    {/* <App/> */}
   </React.StrictMode>
 );
 

@@ -1,0 +1,39 @@
+.App{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient(
+        rgba(255, 255, 255, 0.7),
+        rgba(255, 255, 255, 0.3)
+    ), 
+    url("https://img.freepik.com/free-photo/integrated-microchip-circuit-board-server-central-computer-processor-with-neon-lights_90220-1202.jpg?w=826&t=st=1685530983~exp=1685531583~hmac=582e29bcaaf75d022f69936c8ab676f290da65300d566f9b48e8cc0cf102ab96");
+    background-size: cover;
+    background-position: center;
+
+}
+
+form{
+    background-color: white;
+    padding: 0px 60px;
+    border-radius: 10px;
+}
+
+h1{
+    color: rgb(28, 11, 57);
+    text-align: center;
+}
+
+button{
+    padding: 10px;
+    border: none;
+    background-color: rgb(163, 35, 35);
+    color: white;
+    border-radius: 5px;
+    font-weight: bold;
+    width: 30%;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 15px;
+    margin-bottom: 30px;
+}

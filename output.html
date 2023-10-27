@@ -1,0 +1,73 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./test.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="output"></div>
+    <script>
+
+        const url = 'https://apna.co/jobs/full_time-jobs';
+
+        async function scrapeAllJobs(url, maxPages = 10) {
+            let allJobs = [];
+
+            for (let page = 1; page <= maxPages; page++) {
+                try {
+                    const response = await fetch(`${url}?page=${page}`);
+                    const html = await response.text();
+                    const parser = new DOMParser();
+                    const doc = parser.parseFromString(html, 'text/html');
+
+                    // Extract job data from the current page (replace this with your job data extraction logic)
+                    const jobs = Array.from(doc.querySelectorAll('.JobListCardstyles__JobTitle-ffng7u-7.cuaBGE')).map(jobElement => {
+                        const title = jobElement.textContent.trim();
+                        const companyElement = jobElement.nextElementSibling;
+                        const company = companyElement ? companyElement.textContent.trim() : 'N/A';
+                        const locationElement = companyElement ? companyElement.nextElementSibling : null;
+                        const location = locationElement ? locationElement.textContent.trim() : 'N/A';
+
+                        return { title, company, location };
+                    });
+                    console.log(jobs, 'testss');
+                    // Add the extracted job data to the main array
+                    allJobs.push(...jobs);
+
+                    // Check if there's pagination
+                    const nextPageLink = doc.querySelector('a.next_page');
+                    if (!nextPageLink) {
+                        break;
+                    }
+                } catch (error) {
+                    console.error(`Error fetching jobs from page ${page}:`, error);
+                    break;
+                }
+            }
+
+            return allJobs;
+        }
+
+        const startingURL = 'https://apna.co/jobs/full_time-jobs';
+        const maxPagesToScrape = 10;
+
+        scrapeAllJobs(startingURL, maxPagesToScrape)
+            .then(allJobs => {
+                // Display the scraped job data (just for illustration)
+                const outputDiv = document.getElementById('output');
+                allJobs.forEach(job => {
+                    const jobInfo = document.createElement('p');
+                    jobInfo.textContent = `Job Title: ${job.title}, Company: ${job.company}, Location: ${job.location}`;
+                    outputDiv.appendChild(jobInfo);
+                });
+            })
+            .catch(error => {
+                console.error('Error scraping jobs:', error);
+            });
+    </script>
+</body>
+
+</html>
