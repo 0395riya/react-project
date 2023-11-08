@@ -724,20 +724,23 @@
 
 // //////Printing triangle star pattern using a single loop
 
-// const design = (arr) => {
+// const design = (n) => {
 //     var i;
 //     var j;
-// for(i=0; i <7 ; i++){
-//     var row = '';
-//     for(j=0; j <= i; j++){
-//         row += '*';
-
+//     var k;
+//     for (i = 0; i < n; i++) {
+//         var row = '';
+//         for (j = 0; j <= n-i; j++) {
+//             row += ' ';
+//         }
+//         for (k = 0; k<= 2*i; k++){
+//             row += '*';
+//         }
+//         console.log(row);
 //     }
-//     console.log(row);
-// }
 
 // }
-// design()
+// design(5)
 
 
 // var n= 7;
@@ -790,13 +793,394 @@
 // }
 // tri(6)
 
-const square = (n) => {
-    for (let i = 1; i <= n; i++) {
-        let row = '';
-        for (let j = 1; j <= n; j++) {
-            row += ' * '; 
-        }
-        console.log(row);
-    }
+// const square = (n) => {
+//     for (let i = 1; i <= n; i++) {
+//         let row = '';
+//         for (let j = 1; j <= n; j++) {
+//             row += ' * ';
+//         }
+//         console.log(row);
+//     }
+// }
+// square(4)
+
+
+// const num = (t) => {
+//     var t = this.top - 1;
+//   while(t >= 0) {
+//     console.log(this.data[t]);
+//     t--;
+//   }
+// }
+// console.log(num(5));
+
+// const hollowsqr = (n) => {
+//     for (let i = 0; i < n; i++) {
+//         let row = '  ';
+//         for (let j = 0; j < n; j++) {
+//           if (i === 0 || i === n - 1 || j === 0 || j === n - 1) {
+//             row += '  *';
+//           } else {
+//             row += '   ';
+//           }
+//         }
+//         console.log(row);
+//     }
+
+// }
+
+// hollowsqr(5)
+
+///// Square Root //////
+
+// const sqrt = (n) => {
+// var temp,
+// sr = n/2
+
+// do{
+//     temp = sr
+//     sr= (temp + (n/temp))/2
+// }while(temp!== sr)
+// return  temp
+// }
+// console.log(sqrt(15));
+
+//////////////  Qube Root //////////////
+
+// const qr = (n) => {
+//     var temp,
+//         sr = n / 2
+//     do {
+//         temp = sr
+//         sr = (2 * temp + (n / (temp * temp))) / 3
+//     } while (temp !== sr)
+//     return temp
+// }
+
+// console.log(qr(68));
+
+
+/////////  JavaScript array literal   ////////
+// const arr = () => {
+//     // var emp = ["Sonoo","Vimal","Ratan"]; 
+//     // for (var i=0; i < emp.length; i++){
+//     //     console.log(emp[i]);
+//     // }
+// }
+// arr()
+
+
+/////1. copyWithin() Array //////
+
+// const arr = () => {
+//      var arr = ["AngularJS", "Node.js", "JQuery", "Bootstrap"];
+//     var result = arr.copyWithin(2,3);
+//     console.log(result);
+// }
+// arr()
+
+/////2.  Array entries() Method // array.entries()  | The entries() method creates a new iterator object of an array, holding the key/value pairs for every value in the array. It does not have any parameters. ////
+
+// const arr = () => {
+//     var arr = ['John', 'Michael', 'Embrose', 'Herry', 'Lewis'];
+//     var result = arr.entries();
+//     // for (var data of result) {
+//     //     console.log(data);
+//     // }
+//     for (let data of result) {   // let declares a variable, but its scope is within the block.  
+//         console.log(data);
+//     }
+// }
+// arr()
+
+/////3. Array  every() method /////   array.every(callback(currentvalue,index,arr),thisArg)  /
+// var marks = [50, 40, 45, 37, 20];
+// const arr = (element, index, array) => {
+//     // return index < 5;  //// True
+//     return element > 30  //// return false, as marks[4]=20 
+// }
+// console.log(marks.every(arr))
+
+/////4. Array  flat() method /////   var newArr=arr.flat(<depth>);  The flat() method is an inbuilt array method that flattens a given array into a newly created one-dimensional array. It concatenates all the elements of the given multidimensional array, and flats upto the specified depth.  /
+
+// const arr = () => {
+//     // var arr=['a','b',['c','d']]; //given 2D array  
+//     // var newArr=arr.flat();
+//     var arr = ['John', 'Peter', , 'Tomy', ['Eni', , 'Kerry']]; //given 2D array with holes in between.  
+//     var newArr = arr.flat(); //using flat() method.  
+//     console.log(newArr)
+// }
+// arr()
+
+/////5.  Array flatMap() Method // var newArr=arr.flatMap(function callback(currentValue[ , index[ , array]])  
+// {    return element  } [ , thisArg])
+//        | The flatMap() method is a combination of flat() and map() methods. This method initially maps each array element through a mapping function, then flatten up the array with depth value as 1. ////
+
+
+// var arr=[2,4,6,8];  
+
+//     console.log(arr.flatMap(x=>[[x/2]]));
+
+// var arr1 = ['a', 'b', 'c', 'd'];
+// var arr2 = [1, 2, 3, 4];
+// var newArr = arr1.flatMap((arr1, index) => [arr1, arr2[index]]);
+
+// var arr = ["This is", , "JavaTpoint.com"];  
+// var newArr=arr.flatMap(x => x.split(" "));  
+// console.log(newArr);
+
+/////6. Array  fill() method /////   arr.fill(value[, start[, end]]) /
+
+// const arr = () => {
+//     var arr = ["AngularJS", "Node.js", "JQuery"];
+//     var result = arr.fill("Bootstrap");
+//     console.log(result)
+// }
+// arr()
+
+// var arr=Array.from("You are viewing an example of string");
+// console.log(arr)
+
+// var func = function () {
+//     var arr = Array.from(arguments);
+//     console.log(arr)
+// }
+// func('John', 'Roy', 'Jess', 'Mary')
+
+// var set = new Set(['C','C++','Java','C','Java','C++','Python','Perl']);
+// console.log(Array.from(set));  /////  In the output, we can see that each value occurred only once.
+
+// var arr=["AngularJS","Node.js","JQuery"]; 
+// console.log(arr)
+// console.log(arr.pop())
+// console.log(arr) 
+
+// var arr=["AngulaJS","Node.js","JQuery"];  
+// var len=arr.length;  
+
+// for(var x=1;x<=len;x++)  
+//   {  
+//     console.log(arr.pop()) 
+//   }  
+
+// var arr=["AngularJS","Node.js"];  
+// arr.push("JQuery","Bootstrap"); 
+// console.log(arr) 
+
+////////// Array slice() method    //////  array.slice(start,end)  /
+
+// var arr=["AngularJS","Node.js","JQuery","Bootstrap"]  
+// var result=arr.slice(-4, -2);  
+// console.log(result);
+// console.log(arr.length);
+
+
+///////   Array splice() method    //////// array.splice(start,delete,element1,element2,?,elementn) 
+
+// var arr=["Monday","Tuesday","Thursday","Friday"];  
+// var result=arr.splice(2,2,"Wednesday")  
+// console.log(arr);
+// console.log(result);
+
+
+///////   Array values() method    //////// array.values();   
+
+
+// var arr = ["John","Mary","Tom","Harry","Sheero"]; //Intializing array elements  
+// var itr = arr.values(); //Using values() method.  
+// for (let x of itr) {   
+//     console.log(x); 
+// }
+
+// var arr=["John","Tom","Sheero","Romy","Tomy"]; //Initialized array  
+// var itr=arr.values(); 
+// console.log(itr.next().value); 
+// console.log(itr.next().value);  
+// console.log(itr.next().value);  
+// console.log(itr.next().value);  
+// console.log(itr.next().value);  
+
+
+///////   Array unshift() method    //////// array. unshift(element1,element2,....,elementn)    |   The JavaScript array unshift() method adds one or more elements in the beginning of the given array and returns the updated array.
+
+// var arr=["AngularJS","Node.js"];  
+// var result=arr.unshift("JQuery");  
+// console.log(arr);
+
+// var arr=["AngularJS","Node.js"];  
+// console.log(arr.length);
+// arr.unshift("JQuery","Bootstrap");  
+// console.log(arr.length);
+// console.log(arr);
+
+
+///////////////////////////    While Loop   ////
+
+// var i = 11
+// while (i<=15){
+//     console.log(i);
+//     i++
+// }
+
+// var i = 21;
+// do{
+//     console.log(i);
+//     i++
+// }while(i<=25)
+
+
+
+
+// var arr = [3, 2, 11, 4, 7, 1, 15]
+// var sortArr = []
+// const acsd = (num) => {
+//     for (let i = 0; i < arr.length; i++) {
+//         for (let j = i + 1; j < arr.length; j++) {
+//             let temp = 0;
+//             if (arr[i] > arr[j]) {
+//                 temp = arr[i];
+//                 arr[i] = arr[j];
+//                 arr[j] = temp
+//             }
+//         }
+//         sortArr.push(arr[i])
+//     }
+//     console.log(sortArr);
+// }
+// acsd(arr)
+
+
+// var arr = [3, 2, 11, 4, 7, 1, 15]
+// const ascnum = () => {
+//     let done = false
+//     while (!done) {
+//         done = true
+//         for (let i = 0; i < arr.length; i++) {
+//             if (arr[i] > arr[i + 1]) {
+//                 done = false
+//                 var temp = arr[i + 1]
+//                 arr[i + 1] = arr[i]
+//                 arr[i] = temp
+//             }
+//         }
+//     }
+//     console.log(arr);
+// }
+
+// ascnum(arr)
+
+
+// Q1: Given a string , reverse each word in the sentence?
+
+// var  string = "Welcome to this Javascript Guide!"
+
+// const reverseBySeparator = (string, separator) => {
+// var result = string.split(separator).reverse().join(separator);
+
+// console.log(result);   
+// }
+// reverseBySeparator(string, "")   /////   !ediuG tpircsavaJ siht ot emocleW
+// reverseBySeparator(string, " ")    /////  Guide! Javascript this to Welcome
+
+
+// var string = "Welcome to this Javascript Guide!"
+
+// const reverseBySeparator = (string, separator) => {
+//   var words = string.split(separator);
+//   var reversedWords = words.map(word => word.split("").reverse().join(""));
+//   var result = reversedWords.join(separator);
+//   console.log(result);   
+// }
+
+// reverseBySeparator(string, " ");
+
+
+///    Q2: How to check if an object is an array or not? Provide some code.
+
+
+// var arrList = "Welcome to this Javascript Guide!"
+// var arr = [2, 3, 1, 4]
+// function great(param) {
+// if(typeof param === "string"){
+// console.log("Array!");
+// }else{
+//     console.log("Array");
+
+// }
+// }
+
+///////   OR    //////
+
+// function great() {
+//     if(Object.prototype.toString.call(arrList) === '[object Array]'){
+//     console.log("Array");
+//     }
+//     else{
+//             console.log("!Array");
+
+//         }
+//     }
+
+// great(arrList)
+
+///////   OR    //////
+
+// console.log(Array.isArray(arrList));   /// false
+// console.log(Array.isArray(arr));    ///// True
+
+
+
+////   Q3:  How to empty an array in javascript?
+
+// var arrList = ['a', 'b', 'c', 'd', 'e', 'f']
+// var result = arrList.splice(0, arrList.length)
+// console.log(arrList);
+
+// const emptyArray = () => {
+//     while(arrList.length){
+//         arrList.pop()
+//     }
+//     console.log(arrList);
+
+// //     for(let x=7; x <= arrList.length; x++)  
+// //   {  
+// //     console.log(arrList.pop()) 
+
+// //   }  
+// }
+// emptyArray(arrList)
+
+
+//////    Q4: How would you check if a number is an integer?
+
+// console.log(typeof 2);
+
+// const num = (data) => {
+// if (data){
+//     return console.log(data % 1 === 0);
+// }
+// }
+// num(3.2)
+
+
+//////    Q5:  Implement enqueue and dequeue using only two stacks
+
+// Enqueue means to add an element and dequeue means to remove an element
+var inpstack = [];
+var outstaack = [];
+
+function enqueue(inpstack, item) {
+    return inpstack.push(item)
 }
-square(4)
+enqueue(inpstack)
+
+
+function dequeue(stackinp, stackout) {
+    if (stackout.length <= 0) {
+        while (stackinp.length > 0) {
+            var element = stackinp.pop();
+            stackout.push(element)
+        }
+    }
+    return element.pop()
+}

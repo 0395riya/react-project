@@ -77,4 +77,11 @@
 // ES5    module.exports = Component;
 // ES6    export default Component;
 
+////////////    Formula   ///////////////
+///  BabyLonian Method /////
 
+///// Square Root
+///  xn+1 = (xn + S / xn) / 2
+
+//// Qube Root
+////xn+1 = (2*xn + (S / (xn*xn))) / 3
