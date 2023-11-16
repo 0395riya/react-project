@@ -874,7 +874,7 @@
 
 // const arr = () => {
 //      var arr = ["AngularJS", "Node.js", "JQuery", "Bootstrap"];
-//     var result = arr.copyWithin(2,3);
+//     var result = arr.copyWithin(1,2);
 //     console.log(result);
 // }
 // arr()
@@ -1092,7 +1092,7 @@
 //   console.log(result);   
 // }
 
-// reverseBySeparator(string, " ");
+// reverseBySeparator(string, " ");     ////////   emocleW ot siht tpircsavaJ !ediuG
 
 
 ///    Q2: How to check if an object is an array or not? Provide some code.
@@ -1166,21 +1166,535 @@
 //////    Q5:  Implement enqueue and dequeue using only two stacks
 
 // Enqueue means to add an element and dequeue means to remove an element
-var inpstack = [];
-var outstaack = [];
+// var inpstack = [];
+// var outstack = [];
 
-function enqueue(inpstack, item) {
-    return inpstack.push(item)
+// function enqueue(inpstack, item) {
+//     return inpstack.push(item)
+// }
+// console.log(enqueue(inpstack, 1));
+// console.log(enqueue(inpstack, 2));
+// console.log(enqueue(inpstack, 3));
+// console.log(enqueue(inpstack, 4));
+
+
+
+// function dequeue(stackinp, stackout) {
+//     if (stackout.length <= 0) {
+//         while (stackinp.length > 0) {
+//             var element = stackinp.pop();
+//             stackout.push(element)
+//             console.log(element);
+//             console.log(stackout);
+//         }
+//         console.log(stackout); 
+//     }
+//     return stackout.pop()
+// }
+
+// console.log(dequeue(inpstack, outstack));
+// console.log(dequeue(inpstack, outstack));
+// console.log(dequeue(inpstack, outstack));
+// console.log(dequeue(inpstack, outstack));
+
+
+/////    Q6:   Write a "mul" function which will property when invoked as below
+
+// function mul (x) {          ///// anonymous function 
+//     return function (y) {
+//         return function (z) {
+//             return x*y*z
+//         }
+//     }
+// }
+// console.log(mul (2)(4)(5));
+
+
+//////    Q7:   FizzBuzz Challenge   /////   Create a for loop that iterates up to 100 while outputting "fizz" at multiples of 3, "buzz" at multiples of 5 and "fizzbuzz" at multiples of 3 and 5.
+
+// for (let i = 1; i <= 100; i++){
+//     let f = i % 3 === 0,
+//     b = i % 5 === 0;
+//     console.log(f ? (b ? "FizzBuzz" : "Fizz") : b? "Buzz" : i);
+// }
+
+
+//////  Q8:   Given two strings , return true if they are anagrams of one another .   For example :   "Mary" is an anagram of "Army"
+
+// var firstWors = "Mary";
+// var secondWords = "Army"
+
+// const isAnagram = (first, second) => {
+// var a = first.toLowerCase();
+// var b = second.toLowerCase();
+
+// a = a.split("").sort().join("");
+// b = b.split("").sort().join("");
+
+// return console.log(a === b); ;
+
+// }
+
+// isAnagram(firstWors, secondWords)
+
+
+///////    Q9:   How would you use a closure to create a private counter ?
+
+//You can create a function within an outer function (a clouser) that allows you to update a private variable wouldn't be accessible from outside the function without the use of a helper function.
+
+///  A closure is a feature of JavaScript that allows inner functions to access the outer scope of a function. Closure helps in binding a function to its outer boundary and is created automatically whenever a function is created.
+
+// function counter() {
+//     var count = 0;
+//     return {
+//         add: function (inc) {
+//             count += inc;
+//             console.log(count);
+//         },
+//         retrieve: function () {
+//             return 'The counter is currently at: ' + count;
+//         }
+//     }
+// }
+
+// var result = counter();
+// result.add(5);
+// result.add(9);
+// console.log(result.retrieve());;
+
+
+/////   Q10:  What will be the output of the following code ?
+
+// var y = 1;
+// if(function f() {}) {
+//     y += typeof f;
+// }
+
+// console.log(y);  /// 1undefined
+
+///   If condition statement evaluate using "eval" so "eval(function f() {})" which return "function f() {}""  Which is true so inside if statement  code execute. "typeof f" return undefined because if statement code execute at run time , so statement inside "if" condition evaluate at run time.   
+
+// var k = 1;
+// if(1) {
+//     eval (function foo() {});
+//     k += typeof foo;
+//  }
+//  console.log(k)    /////  1undefined
+
+// var k = 1;
+// if(1) {
+//     function foo() {}
+//     k += typeof foo;
+// }
+// console.log(k)    /////   1function
+
+
+//////    Q11:  What will the following code output?
+
+// (function () {
+//     var a = b = 5;
+// })();
+// console.log(b);   ////  output 5,   even though it seems as if the variable was declared within a function and can't be accessed outside of it. But "b" is not declared anywhere in the function with "var" so it is set equal to 5 in the global scope.
+
+
+//////     Q12:   Write a function that would allow you to do this
+
+// function mul(a) {
+//     return function (b) {
+//         return a*b
+//     }
+// }
+
+// console.log(mul(5)(6));
+
+
+/////   Q13:  How does the "this" keyword work? Provide some examples
+
+// function foo () {
+//     console.log(this.bar);
+// }
+
+// var bar = "Global";
+// var obj1 = {
+//     bar: "object1",
+//     data : foo
+// }
+
+// var obj2 = {
+//     bar: "object2"
+// }
+
+// foo();  /// "Global"
+// obj1.data()   ////  "object1"
+// foo.call(obj2)     /////   "object2"
+// new foo()    /////   undefined
+
+
+/////   Q14:   How would you create a private variable in Javascript?
+// To create a private variable in javascript that cannot be changed you need to create it as a local variable within a function. Even if the function is executed the variable cannot be accessed outside of the function.
+
+// function variable () {
+//     var priv = "secret code"
+// }
+
+// console.log(variable(priv));  ////   Throw error
+
+////  To access the variable , a helper function would need to be created tha return the private variable.
+
+// function variable() {
+//     var priv = "secret code"
+//     return function () {
+//         return priv
+//     }
+// }
+
+// var getdata = variable()
+
+// console.log(getdata());
+
+
+//////       Async/await
+
+// class Thenable {
+//     constructor(num) {
+//       this.num = num;
+//     }
+//     then(resolve, reject) {
+//       alert(resolve);
+//       setTimeout(() => resolve(this.num * 2), 1000); // (*)
+//     }
+//   }
+
+//   async function f() {
+//     // waits for 1 second, then result becomes 4
+//     let result = await new Thenable(2);
+//     // alert(result);
+//     console.log(result);
+//   }
+
+//   console.log(f());
+
+
+// class Waiter {
+//   async Wait() {
+//     return await Promise.resolve(2)
+//   }
+// }
+
+// new Waiter().Wait().then(alert)
+// ////    OR
+// new Waiter().Wait().then(result => alert(result))
+
+
+
+// async function f() {
+//   try{
+//     let response = await fetch("http://no-such-url")
+//     let result = await response.json()
+//   }catch(err){
+//     alert (err)
+//   }
+// }
+// f()
+
+
+
+// function loadJson(url) {
+//   return fetch(url)
+//     .then(response => {
+//       if (response.status == 200) {
+//         return response.json();
+//       } else {
+//         throw new Error(response.status);
+//       }
+//     });
+// }
+
+// loadJson('https://javascript.info/no-such-user.json')
+//   .catch(alert); // Error: 404
+
+
+
+
+// // class HttpError extends Error {
+// //   constructor(response) {
+// //     super(`${response.status} for ${response.url}`);
+// //     this.name = 'HttpError';
+// //     this.response = response;
+// //   }
+// // }
+
+// // function loadJson(url) {
+// //   return fetch(url)
+// //     .then(response => {
+// //       if (response.status === 200) {
+// //         return response.json();
+// //       } else {
+// //         throw new HttpError(response);
+// //       }
+// //     });
+// // }
+
+// // // Ask for a user name until github returns a valid user
+// // function demoGithubUser() {
+// //   let name = prompt("Enter a name?", "iliakan");
+
+// //   return loadJson(`https://api.github.com/users/${name}`)
+// //     .then(user => {
+// //       alert(`Full name: ${user.name}.`);
+// //       return user;
+// //     })
+// //     .catch(err => {
+// //       if (err instanceof HttpError && err.response.status === 404) {
+// //         alert("No such user, please re-enter.");
+// //         return demoGithubUser();
+// //       } else {
+// //         throw err;
+// //       }
+// //     });
+// // }
+
+// // demoGithubUser();
+
+
+
+// // class HttpError extends Error {
+// //   constructor(response) {
+// //     super(`${response.status} for ${response.url}`)
+// //     this.name = "HttpError";
+// //     this.response = response;
+// //   }
+// // }
+
+// // async function loadJson(url) {
+// //   let response = await fetch(url)
+// //   if (response.status === 200) {
+// //     return response.json();
+// //   } else {
+// //     throw new HttpError(response)
+// //   }
+// // }
+
+// // async function demoGithubUser() {
+// //   let user;
+// //   while (true) {
+// //     let name = prompt("Enter a name?", "iliakan")
+// //     try {
+// //       user = await loadJson(`https://api.github.com/users/${name}`)
+// //       break;
+// //     } catch (err) {
+// //       if (err instanceof HttpError && err.response.status === 404) {
+// //         alert("No such user, please re-enter")
+// //       } else {
+// //         throw err
+// //       }
+// //     }
+// //   }
+
+// //   alert(`Full name: ${user.name}.`);
+// //   return user;
+// // }
+
+// // demoGithubUser();
+
+
+// ///////    Call async from non-async
+
+// async function wait() {
+//   await new Promise(response => setTimeout(response, 1000))
+//   return 10
+// }
+
+// function f() {
+//   wait().then(result => alert(result))
+// }
+
+// f()
+
+
+
+// let promise = new Promise(function(resolve, reject) {
+//   setTimeout(() => resolve('Promise resolved'), 4000);
+// })
+
+// async function asyncFunc(){
+//   let result = await promise;
+//   console.log(result);
+//   console.log("Hello");
+// }
+
+// asyncFunc()
+
+
+///////     Q15: What is clouser in javascript?
+
+////   A Clouser is a function defined inside another function and has access to the variable  which is declared and defined in parent function scope.
+
+// var globalVar = "Clouser";
+
+// (function outerFunction(outerArg) {
+//   var outerFuncVar = "x";
+//    (function innerFunction(innerArg) {
+//     var innerFuncVar = "y";
+//      console.log(
+//       "outerArg = " + outerArg + "\n",
+//       "innerArg = " + innerArg + "\n",
+//       "outerFuncVar = " + outerFuncVar + "\n",
+//       "innerFuncVar = " + innerFuncVar + "\n",
+//       "globalVar = " + globalVar + "\n"
+//     );
+//   })(5);
+// })(7)
+
+
+
+//////   Q16: What will be the output of the following code?
+
+// var output = (function(x) {
+//   delete x;
+//   return x;
+// })(0)
+
+// console.log(output);    //////    output: 0
+
+
+
+// var Employee = {
+//   company: 'xyz'
+// }
+
+// var output = (function () {
+//   var emp = Object.create(Employee)
+//   console.log(emp);
+//   delete emp.company;
+//   console.log(emp.company);   //////   output: xyz,    Delete operator doesn't delete prototype property, In this example 'emp' object got company as prototype property.
+//   console.log(emp.hasOwnProperty('company'));      //////   output: false
+// })()
+
+// console.log(output);
+
+
+
+///////   Q17: When would you use the  'bind' function?
+//  The bind method creates a new function 
+
+//  const fullName = function() {
+//   var result = "Hello, this is " + this.first + " " + this.last;
+//   console.log(result);
+//  }
+//  console.log(fullName());
+
+//  var person = {first: "Foo", last: "Bar"};
+//  console.log(fullName.bind(person)());
+
+////////////////// OR
+
+// function fullName (){
+//   return "Hello, this is " + this.first + " " + this.last;
+// }
+// console.log(fullName());
+
+// var person = {
+//   first : "Foo",
+//   last : "Bar"
+// }
+
+// console.log(fullName.bind(person)());
+
+
+///////  Q18:  write a recursive function that performs a binary search
+
+///   Recursion is a process of calling itself. A function that calls itself is called a recursive function.A recursive function must have a condition to stop calling itself. Otherwise, the function is called indefinitely.
+//  Syntax:
+// function recurse () {
+//   // function code
+//   recurse();
+//   // function code
+// }
+
+// recurse()
+
+// function countDown (num) {
+// console.log(num);
+// const newNum = num - 1;
+// if (newNum > 0){
+//   countDown(newNum)
+// }
+// }
+// countDown(4)
+
+
+///  Example 2: Find Factorial
+// function factorial(num) {
+//   if (num === 0) {
+//     return 1;
+//   } else {
+//     return num * factorial(num - 1);
+//   }
+// }
+
+// const number = 3;
+// if(number > 0){
+//   let result = factorial(number);
+//   console.log(`The factorail of ${number} is ${result}`);
+// }
+
+
+
+// function recursion (arr, val, leftVal, rightVal) {
+// if(leftVal > rightVal ){
+//   return -1;
+// }
+// var middlePivot = Math.floor((leftVal + rightVal)/2);
+// if(arr[middlePivot] === val){
+//   return middlePivot;
+// }else if(arr[middlePivot] > val){
+//   return recursion (arr, val, leftVal, middlePivot - 1);
+// }else {
+//   return recursion (arr, val, middlePivot + 1, rightVal);
+// }
+// }
+
+// console.log(recursion(8, 5, 6, 7));
+
+
+
+///// Q: Write a recursive function that returns the binary string of a given decimal number
+
+// console.log(decimalToBinary(3)); // 11
+// console.log(decimalToBinary(8)); // 1000
+// console.log(decimalToBinary(1000)); // 1111101000
+
+// function decimalToBinary(digit) {
+//   if (digit >= 1) {
+//     // If digit is not divisible by 2 then recursively return proceeding
+//     // binary of the digit minus 1, 1 is added for the leftover 1 digit
+//     if (digit % 2) {
+//       return decimalToBinary((digit - 1) / 2) + 1;
+//     } else {
+//       // Recursively return proceeding binary digits
+//       return decimalToBinary(digit / 2) + 0;
+//     }
+//   } else {
+//     // Exit condition
+//     return '';
+//   }
+// }
+
+
+
+//////   Q:   Given an integer, determine if it is a power of 2. If so, return that number, else return -1. (0 is not a power of two)
+
+function isPowerofTwo(digit) {
+ return digit & (digit - 1) === 0;
 }
-enqueue(inpstack)
 
-
-function dequeue(stackinp, stackout) {
-    if (stackout.length <= 0) {
-        while (stackinp.length > 0) {
-            var element = stackinp.pop();
-            stackout.push(element)
-        }
-    }
-    return element.pop()
+function isPowerofTwoZeroCase(digit) {
+return (digit !== 0) && ((digit & (digit - 1)) === 0);
 }
+
+console.log(isPowerofTwo(4));
+console.log(isPowerofTwo(0));
+console.log(isPowerofTwoZeroCase(4));
+
+

@@ -85,3 +85,72 @@
 
 //// Qube Root
 ////xn+1 = (2*xn + (S / (xn*xn))) / 3
+
+
+/////    Q:  Provide some examples of non-boolean value coercion to a boolean one
+///  The specific list of "falsy" values in javascript :
+// 1. ""(empty string) 
+// 2. 0, -0, NaN  (invalid number)
+// 3. null, undefined
+// 4. false
+
+///  Any value that's not on this "falsy" list is "truthy". Here are some examples of those:
+// 1. "hello"
+// 2. 42
+// 3. true
+// 4. [], [1, "2", 3] (array)
+// 5. {}, {a: 42} (objects)
+// 6. function foo() {...}  (function)
+
+
+////////    Q:  Javscript async/await
+// We use the async keyword with a function to represent that the function is an asynchronous function. The async function returns a promise.
+// async function f() {
+//     console.log('Async function.');
+//     return Promise.resolve(1);
+// }
+
+// f();       ///// output: Async function.
+
+
+//  Since this function returns a promise, you can use the chaining method then() like this:
+
+// async function f() {
+//      console.log('Async function.');
+//      return Promise.resolve(1)
+// }
+
+// f().then(function(result){
+//     console.log(result);
+// })                                                 /////   output:  Async function
+                                                    ///              1
+//////   In the above program, the f() function is resolved and the then() method gets executed.                                                    
+
+  
+////   JavaScript await Keyword
+///   The await keyword is used inside the async function to wait for the asynchronous operation.
+//  Syntax:     let result = await promise;
+
+
+                             //////       JavaScript Recursion
+
+// Recursion is a process of calling itself. A function that calls itself is called a recursive function.
+// function recurse() {
+//     // function code
+//     recurse();
+//     // function code
+// }
+
+// recurse();   
+
+//  A recursive function must have a condition to stop calling itself. Otherwise, the function is called indefinitely.To prevent infinite recursion, you can use if...else statement (or similar approach) where one branch makes the recursive call, and the other doesn't.
+// function recurse() {
+//     if(condition) {
+//         recurse();
+//     }
+//     else {
+//         // stop calling recurse()
+//     }
+// }
+
+// recurse();
