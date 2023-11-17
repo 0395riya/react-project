@@ -1685,16 +1685,200 @@
 
 //////   Q:   Given an integer, determine if it is a power of 2. If so, return that number, else return -1. (0 is not a power of two)
 
-function isPowerofTwo(digit) {
- return digit & (digit - 1) === 0;
+// function isPowerofTwo(digit) {
+//  return digit & (digit - 1) === 0;
+// }
+
+// function isPowerofTwoZeroCase(digit) {
+// return (digit !== 0) && ((digit & (digit - 1)) === 0);
+// }
+// isPowerofTwo()
+
+// // console.log(isPowerofTwo(0));
+// // console.log(isPowerofTwo(0));
+// console.log(isPowerofTwoZeroCase(4));
+
+
+////////////////////    Q:  What is callback hell and what is the main cause of it?
+
+
+////////////////////     Q: Buble short
+// const bubbleShort = (array) => {
+//   let swaps;
+//   do {
+//     swaps = false;
+//     for (let i = 1; i < array.length; i++) {
+//       if (array[i] < array[i - 1]) {
+//         let temp = array[i - 1];
+//         array[i - 1] = array[i];
+//         array[i] = temp;
+//         swaps = true;
+//       }
+//     }
+//   } while (swaps)
+//   console.log(array);
+// }
+// bubbleShort([4,3,5,2,8,7,6])
+
+
+
+////////////////////////  Q:  Write a function called lucky_sevens which takes an array of integers and returns true if any three consecutive elements sum to 7.
+
+// const lucky_sevens = (arr) => {
+// if(arr.length < 3){
+//   return "Not possible";
+// }
+// for(var i=2; i < arr.length; i++){
+//   if(arr[i]+arr[i-1]+arr[i-2] === 7){
+//     return true;
+//   }
+// }
+// return false;
+// }
+// console.log(lucky_sevens([2, 1, 5, 1, 0]));
+
+
+
+///////////////////   Q:   Clock angle -  You will be given a number N that represents where the minute hand currently is on a clock. Your program should return the angle that is formed by the minute hand and the 12 o'clock mark on the clock.
+
+// const simpleClockAngle = (num) => {
+//   return 6 * num
+// }
+
+// console.log(simpleClockAngle(60));
+
+
+
+///////////////////////////  Q:   You will be given an array of several arrays that each contain integers and your goal is to write a function that will sum up all the numbers in all the arrays. For example, if the input is [[3, 2], [1], [4, 12]] then your program should output 22 because 3 + 2 + 1 + 4 + 12 = 22. Solve without and with reduce.
+
+// const sumArr = (arr) => {
+// var sum = 0;
+// for(var i=0; i < arr.length; i++){
+//   for(var j=0; j < arr[i].length; j++){
+//     sum += arr[i][j];
+//   }
+// }
+// return sum
+// }
+
+// console.log(sumArr([[3, 2], [1], [4, 12]]));
+
+
+
+// function sumArray(arr) {
+//   return arr.reduce((t, e) => t.concat(e)).reduce((t, e) => t + e)
+// }
+// console.log(sumArray([[3, 2], [1], [4, 12]]));
+
+
+
+///////////////////////  Q:   You will be given 2 parameters: a low and high number. Your goal is to print all numbers between low and high, and for each of these numbers print whether or not the number is divisible by 3. If the number is divisible by 3, print the word "div3" directly after the number.
+
+// const test_divisor = (low, high) => {
+// var output = []
+// for(var i=low; i <= high; i++){
+//   output.push(i);
+//   if(i % 3 === 0){
+//      output.push('div3')
+//   }
+// }
+// return output;
+// }
+// console.log(test_divisor(2,15));
+
+
+///////////////////////  Q:   (Oddball Sum)  Write a function called oddball_sum which takes in a list of numbers and returns the sum of all the odd elements. Try to solve with and without reduce function.
+
+// const oddball_sum = (arr) => {
+// var sum = 0 ;
+// for(var i=0; i < arr.length; i++){
+//   if(arr[i] % 2 !== 0){
+// sum += arr[i]
+//   }
+// }
+// return sum;
+// }
+// console.log(oddball_sum([2, 3, 4, 6, 7, 9, 8, 1]));
+
+
+
+///////////////////    Q:  Write a function that takes an array of integers and returns the sum of the integers after adding 1 to each.
+
+// const intArr = (arr) => {
+// var sum = 0;
+// for(var i=0; i < arr.length; i++){
+//    sum += arr[i]+1;
+  
+// }
+// return sum ;
+// }
+// console.log(intArr([2, 3, 4, 6, 7, 9, 8, 1]));
+
+
+
+// const intArr = (arr) => {
+//   var sum = [];
+//   for(var i=0; i < arr.length; i++){
+//     let temp = arr[i]+1;
+//     sum.push(temp)
+//   }
+//   return sum ;
+//   }
+//   console.log(intArr([2, 3, 4, 6, 7, 9, 8, 1]));
+
+
+// const intArr = (arr) => {                        /////   add 2 on odd place and add 1 on even position
+//   var sum = [];
+//   for(var i=0; i < arr.length; i++){
+//     if(i % 2 === 0){
+//       var temp = arr[i]+1;
+//       sum.push(temp)
+//     }else {
+//       temp = arr[i]+2;
+//       sum.push(temp)
+//     }
+//   }
+//   return sum ;
+//   }
+//   console.log(intArr([2, 3, 4, 6, 7, 9, 8, 1]));
+
+
+
+//////////////////////   Q:   Find out if a string is a rotation of another string. E.g. ABCD is a rotation of BCDA but not ACBD.
+// var string = 'ABCD'
+
+// const rotation = (string) => {
+// let rotate = string.split("")
+
+// for (let i = 1; i < rotate.length; i++) {
+//     rotate.unshift(rotate.pop());
+// }
+// console.log(rotate.join(''));
+// }
+// rotation(string)
+
+
+
+//////////////////////////   Q:   Return the N-th value of the Fabonacci sequence Recursively.
+
+// function fib(n) {
+//     if (n < 2){
+//       return n
+//     }
+//     return fib(n - 1) + fib (n - 2)
+//   }
+
+//   console.log(fib(7));
+
+
+const fibo = (n) => {
+let arr = [0, 1];
+for(let i = 2; i < n+1; i++){
+    arr.push(arr[i-2] + arr[i-1])
+}
+return arr[n]
 }
 
-function isPowerofTwoZeroCase(digit) {
-return (digit !== 0) && ((digit & (digit - 1)) === 0);
-}
-
-console.log(isPowerofTwo(4));
-console.log(isPowerofTwo(0));
-console.log(isPowerofTwoZeroCase(4));
+console.log(fibo(4));
 
 

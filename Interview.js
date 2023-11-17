@@ -154,3 +154,12 @@
 // }
 
 // recurse();
+
+
+///////////////////////  Q:  Explain what is hoisting in Javascript
+// Hoisting is the concept in which Javascript, by default, moves all declarations to the topof the current scope. As such, a variable can be used before it has been declared. Note thatJavascript only hoists declarations and not initializations
+
+
+///////////////////////  Q:  Explain event bubbling and how one may prevent it
+//   Event bubbling is the concept in which an event triggers at the deepest possible element,and triggers on parent elements in nesting order. As a result, when clicking on a child elementone may exhibit the handler of the parent activating.One way to prevent event bubbling is using `event.stopPropagation()` or `event.cancelBubble`on IE < 9
+
